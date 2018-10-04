@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">QuizApplication</string>
+
+    <string-array name="questions">
+        <item>first question</item>
+        <item>second question</item>
+        <item>third question</item>
+        <item>fourth question</item>
+        <item>fifth question</item>
+    </string-array>
+
+    <string-array name="ketchupup_ingredient">
+        <item>atlantic cod</item>
+        <item>tomatoes</item>
+        <item>melted copper</item>
+        <item>bananas</item>
+    </string-array>
+
+</resources>

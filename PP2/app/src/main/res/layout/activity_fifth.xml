@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:id="@+id/image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/graphs"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_description"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:text="5. Which famous math equation remain unsolved?"
+        android:textSize="20sp"
+        android:textColor="#000"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fifthrg"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:id="@+id/Reimann"
+            android:text="Reimann Hypothesis"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:id="@+id/conjecture"
+            android:text="Poincaré Conjecture"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fermat"
+            android:text="Fermat's Last Theorem"
+            android:layout_marginLeft="25dp"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:id="@+id/relative"
+            android:text="Einstein's Theory of Relativity"
+            />
+    </RadioGroup>
+
+
+</LinearLayout>

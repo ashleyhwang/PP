@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:weightSum = "100"
+    android:layout_height="match_parent"
+    tools:context=".thirdActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_weight="60"
+        android:src="@drawable/choux"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/choux"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:text="3. What is the origin of the word, Choux à la cream, known as cream puffs?"
+        android:textSize="16sp"
+        android:textColor="#000"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/thirdrg"
+        android:layout_marginTop="20dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:id="@+id/baloons"
+            android:text="Balloons"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:id="@+id/Cabbage"
+            android:text="Cabbage"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:id="@+id/Velvet"
+            android:text="Velvet"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cottoncandy"
+            android:text="Cotton Candy"
+            android:layout_marginLeft="25dp"
+            />
+    </RadioGroup>
+
+</LinearLayout>
