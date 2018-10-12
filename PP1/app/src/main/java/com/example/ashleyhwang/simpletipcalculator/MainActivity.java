@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     int totalPeople;
     String[] num;
 
-
     //data field
     double inputAmount = 0;
     double bp, tp, tip = 0;
@@ -107,7 +106,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                 //checks whether radio button(tip) is selected
                 if(rgroup.getCheckedRadioButtonId()== -1){
-                    Toast.makeText(MainActivity.this, "Don't forget to tip the server!!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,
+                            "Don't forget to tip the server!!!", Toast.LENGTH_SHORT).show();
                     amount.getText().clear();
                 } else {
                     changeTextView();

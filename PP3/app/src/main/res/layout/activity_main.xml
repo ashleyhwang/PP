@@ -41,6 +41,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
                     android:text="To Do List App"
+                    android:textStyle="bold"
                     android:textColor="#fff"
                     android:textSize="20dp" />
 
@@ -70,17 +71,21 @@
                 android:background="@drawable/round_button"
                 android:backgroundTint="@color/colorAccent"
                 android:gravity="center_horizontal|center_vertical"
+                android:textStyle="bold"
                 android:text="ADD"
                 android:textColor="#fff" />
+
         </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar">
+
+        </android.support.v7.widget.RecyclerView>
     </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar">
 
-    </android.support.v7.widget.RecyclerView>
 
 
 </RelativeLayout>

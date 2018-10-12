@@ -1,0 +1,56 @@
+package com.example.ashleyhwang.todolist;
+
+import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.util.List;
+
+public class RecyclierViewAdapter extends RecyclerView.Adapter<RecyclierViewAdapter.MyViewHolder> {
+
+    public RecyclierViewAdapter(Context mContext, List<String> mData){
+        this.mContext=mContext;
+        this.mData= mData;
+    }
+
+    private Context mContext;
+    private List<String> mData;
+    @NonNull
+    @Override
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view;
+        LayoutInflater mInflator = LayoutInflater.from(mContext);
+
+        view = mInflator.inflate(R.layout.cardview_item, null);
+
+
+        return new MyViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+
+        holder.td.setText(mData.get(position));
+    }
+
+    @Override
+    public int getItemCount() {
+        return mData.size();
+    }
+
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
+
+        TextView td;
+
+        public  MyViewHolder(View itemView){
+            super(itemView);
+
+            td = (TextView) itemView.findViewById(R.id.thingstodo);
+
+        }
+    }
+}
