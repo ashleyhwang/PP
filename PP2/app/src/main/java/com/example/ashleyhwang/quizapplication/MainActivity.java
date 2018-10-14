@@ -56,7 +56,9 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
                 //checks how many answers you got right
                 while(count<5){
                     if(answers[count]==null){
-                        Toast.makeText(MainActivity.this, "Seems like you haven't answered all the questions yet!\nPlease answer the question number: "+(count+1), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this,
+                                "Seems like you haven't answered all the questions yet!\nPlease answer the question number: "+(count+1),
+                                Toast.LENGTH_SHORT).show();
                         break;
                     } else {
                         if(AnswerSet.contains(answers[count])){
@@ -107,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
     }
 
     private void initRecyclerView(){
-        Log.d(TAG, "initRecyclerView");
+//        Log.d(TAG, "initRecyclerView");
         RecyclerView recyclerView = findViewById(R.id.recyclerv_view);
         adapter = new RecyclerViewAdapter( mNames, mImageUrls,this);
         adapter.setClickListener(this);

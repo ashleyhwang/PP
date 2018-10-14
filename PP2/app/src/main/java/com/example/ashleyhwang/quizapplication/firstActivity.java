@@ -20,7 +20,6 @@ import java.util.List;
 
 public class firstActivity extends AppCompatActivity {
     public static String firstA ="";
-    private static final String TAG = "firstActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,6 @@ public class firstActivity extends AppCompatActivity {
         getIncomingIntent();
         initRadioGroup();
     }
-
     private void initRadioGroup(){
         RadioGroup rg = (RadioGroup)findViewById(R.id.firstrg);
         rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
@@ -40,7 +38,6 @@ public class firstActivity extends AppCompatActivity {
             RadioButton button_copper = (RadioButton) findViewById(R.id.copper);
             RadioButton button_tomatoes = (RadioButton) findViewById(R.id.tomatoes);
             RadioButton button_bananas = (RadioButton) findViewById(R.id.bananas);
-
             if (button_atlantic.isChecked()==true){
                 firstA = "atlantic fish";
             }
@@ -60,20 +57,15 @@ public class firstActivity extends AppCompatActivity {
         }
         });
     }
-
-
     private void getIncomingIntent(){
-        Log.d(TAG, "getIncomingIntent: started.");
 
         if(getIntent().hasExtra("images") && getIntent().hasExtra("image_name")){
-            Log.d(TAG, "getIncomingIntent: found intent extras");
             String imageUrl = getIntent().getStringExtra("images");
             String imageName = getIntent().getStringExtra("image_name");
 //            setImage(imageUrl, imageName);
         }
     }
     private void setImage(Integer imageUrl, String image_name){
-        Log.d(TAG, "setImage: setting image and ");
         TextView name = findViewById(R.id.image_description);
         name.setText(image_name);
         ImageView image = findViewById(R.id.image);

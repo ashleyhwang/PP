@@ -16,17 +16,13 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class MainActivity extends AppCompatActivity
+        implements AdapterView.OnItemSelectedListener{
 
-    EditText amount;
-    TextView txt1;
-    TextView txt2;
-    TextView txt3;
+    EditText amount; TextView txt1; TextView txt2; TextView txt3;
     Spinner spinner1;
-    Button btn1;
-    Button btn2;
-    RadioGroup rgroup;
-    RadioButton tip15, tip18, tip20, tip25;
+    Button btn1; Button btn2;
+    RadioGroup rgroup; RadioButton tip15, tip18, tip20, tip25;
     int totalPeople;
     String[] num;
 
@@ -59,7 +55,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         rgroup.clearCheck();
 
        ArrayAdapter<CharSequence> adapter =
-               ArrayAdapter.createFromResource(this, R.array.numbers, android.R.layout.simple_spinner_item);
+               ArrayAdapter.createFromResource(this, R.array.numbers,
+                       android.R.layout.simple_spinner_item);
        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
        spinner1.setAdapter(adapter);
        spinner1.setOnItemSelectedListener(this);
