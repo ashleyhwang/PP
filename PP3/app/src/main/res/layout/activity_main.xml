@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,13 +10,11 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:background="@color/colorPrimary"
             android:orientation="horizontal">
 
@@ -26,8 +24,8 @@
                 android:layout_height="62dp"
                 android:layout_marginBottom="15dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="15dp"
-                android:src="@mipmap/checklisticon" />
+                android:layout_marginTop="30dp"
+                android:src="@drawable/checklisticon" />
 
             <LinearLayout
                 android:layout_width="200dp"
@@ -39,32 +37,37 @@
                     android:id="@+id/todo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
-                    android:text="To Do List App"
+                    android:layout_marginTop="35dp"
+                    android:text="@string/app_name"
                     android:textStyle="bold"
                     android:textColor="#fff"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/longclick"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:text="** Long press to remove it"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:layout_marginStart="5dp"
+                    android:text="@string/longclick"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"/>
 
                 <EditText
                     style="@style/Widget.AppCompat.EditText"
+                    android:id="@+id/textbox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
                     android:background="#fff"
-                    android:hint="Enter your to-do here" />
+                    android:hint="@string/hint"
+                    android:fontFamily="sans-serif"
+                    android:textSize="20sp"/>
             </LinearLayout>
 
             <Button
                 style="@style/Widget.AppCompat.Button"
+                android:id="@+id/add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -72,20 +75,18 @@
                 android:backgroundTint="@color/colorAccent"
                 android:gravity="center_horizontal|center_vertical"
                 android:textStyle="bold"
-                android:text="ADD"
+                android:text="@string/add"
                 android:textColor="#fff" />
-
         </LinearLayout>
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/toolbar">
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         </android.support.v7.widget.RecyclerView>
     </LinearLayout>
 
 
 
 
-</RelativeLayout>
+</LinearLayout>
